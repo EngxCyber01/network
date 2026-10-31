@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="A focused study and revision platform for the Network Principles lecture." />
+    <title>Network Principles | Study & Revision</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="Network Principles home">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 32 32" role="presentation">
+            <path d="M8 9 L24 9 M8 9 L16 23 M24 9 L16 23" />
+            <circle cx="8" cy="9" r="3" /><circle cx="24" cy="9" r="3" /><circle cx="16" cy="23" r="3" />
+          </svg>
+        </span>
+        <span>
+          <strong>Network Principles</strong>
+          <small>Study &amp; Revision</small>
+        </span>
+      </a>
+      <nav class="header-nav" aria-label="Primary navigation">
+        <a href="#learn">Learn</a>
+        <a href="#test-yourself">Test Yourself</a>
+      </nav>
+      <button class="menu-button" id="menu-button" aria-expanded="false" aria-controls="mobile-nav">Menu</button>
+    </header>
+    <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile navigation">
+      <a href="#learn">Learn</a>
+      <a href="#test-yourself">Test Yourself</a>
+      <div class="mobile-topic-list" id="mobile-topic-list"></div>
+    </nav>
+
+    <main id="top">
+      <section class="intro-band">
+        <div class="intro-copy">
+          <p class="eyebrow">One lecture · 181 slides · source-grounded</p>
+          <h1>Understand how networks move information.</h1>
+          <p class="lead">
+            A structured reading guide for the Network Principles lecture, from network
+            components and media to OSI/TCP-IP layers, protocols, addressing, and subnetting.
+          </p>
+          <div class="intro-actions">
+            <a class="button button-dark" href="#learn">Start learning <span aria-hidden="true">↓</span></a>
+            <a class="text-link" href="#test-yourself">Test your understanding <span aria-hidden="true">→</span></a>
+          </div>
+        </div>
+        <div class="intro-index" aria-label="Lecture overview">
+          <div class="index-rule"></div>
+          <p class="eyebrow">Lecture map</p>
+          <ol>
+            <li><span>01</span> Foundations &amp; structure</li>
+            <li><span>02</span> Models &amp; protocols</li>
+            <li><span>03</span> Addressing &amp; delivery</li>
+            <li><span>04</span> Revision &amp; practice</li>
+          </ol>
+        </div>
+      </section>
+
+      <div class="reading-progress" aria-hidden="true"><span id="reading-progress-bar"></span></div>
+
+      <section class="workspace" id="learn">
+        <aside class="contents-panel" aria-label="Lecture contents">
+          <div class="contents-heading">
+            <p class="eyebrow">Contents</p>
+            <button class="contents-toggle" id="contents-toggle" aria-expanded="true">Hide</button>
+          </div>
+          <div id="contents-list"></div>
+          <a class="contents-quiz-link" href="#test-yourself">Go to Test Yourself <span>→</span></a>
+        </aside>
+
+        <div class="reading-column">
+          <div class="reading-toolbar">
+            <label class="search-box">
+              <span aria-hidden="true">⌕</span>
+              <input id="search-input" type="search" placeholder="Search lecture content" autocomplete="off" />
+            </label>
+            <span class="source-note">Based on Network Principles lecture</span>
+          </div>
+          <div id="search-results" class="search-results" hidden></div>
+          <div id="topic-container"></div>
+        </div>
+      </section>
+
+      <section class="quiz-section" id="test-yourself">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Revision lab</p>
+            <h2>Test Yourself</h2>
+          </div>
+          <p>Answer one question at a time. Feedback appears only after you submit.</p>
+        </div>
+        <div class="quiz-shell">
+          <div class="quiz-controls">
+            <label for="topic-filter">Practice topic</label>
+            <select id="topic-filter">
+              <option value="all">All Topics</option>
+            </select>
+            <button class="button button-outline" id="restart-button" type="button">Restart quiz</button>
+          </div>
+          <div id="quiz-container"></div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>Network Principles · Study &amp; Revision</span>
+      <span>Built from the uploaded lecture material</span>
+    </footer>
+    <script src="app.js"></script>
+  </body>
+</html>
